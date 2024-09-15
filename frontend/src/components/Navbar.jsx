@@ -3,8 +3,8 @@ import { LogIn, LogOut, ShoppingCart, UserPlus, Lock } from "lucide-react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  const user = false;
-  const isAdmin = false;
+  const user = true;
+  const isAdmin = true;
   return (
     <header className="bg-gray-900">
       <div className="mx-auto px-3 py-4">
@@ -13,7 +13,7 @@ function Navbar() {
             to="/"
             className="text-2xl font-bold text-gray-100 items-center space-x-2 flex"
           >
-            E-Commerce
+            Sourav Website
           </Link>
 
           <nav className="flex flex-wrap items-center gap-4">
@@ -39,7 +39,7 @@ function Navbar() {
               </Link>
             )}
             {isAdmin && (
-              <Link className="bg-gray-200 hover:bg-slate-700 text-black px-3 py-1 rounded-md font-medium transition duration-300 ease-in-out flex items-center">
+              <Link className="bg-gray-200 hover:bg-slate-700 text-black px-3 py-1 rounded-md font-medium transition duration-300 ease-in-out flex items-center" to={"/secret-dashboard"}>
                 <Lock className="inline-block mr-1" size={18} />
                 <span className="hidden sm:inline">Dashboard</span>
               </Link>
